@@ -1,3 +1,5 @@
 #!/bin/bash
 
-/usr/bin/tmux -2 new -s vim "vim $1"
+. /root/.bashrc
+
+GOPATH=/Users/Ivo/Projects/Go tmux -2 -u new -s vim  "vim --cmd \"cd $1\" $2"
