@@ -11,9 +11,7 @@ BASEDIR=$(dirname $FILE)
 if [ -d $FILE ]; then
     BASEDIR=$FILE
 fi
-echo $FILE
-echo $BASEDIR
 
-docker run -i -t --rm -v /Users/Ivo:/Users/Ivo iverberk/vim-go $BASEDIR $FILE
+docker run -i -t --rm --hostname dev -v /Users/Ivo:/Users/Ivo iverberk/vim-go $BASEDIR $FILE
 
 exit 0
